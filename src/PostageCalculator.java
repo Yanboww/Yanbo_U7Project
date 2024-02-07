@@ -1,5 +1,5 @@
 public class PostageCalculator {
-    static final double baseCost = 3.75;
+    private static final double baseCost = 3.75;
 
     public static double calculatePostage(int zip1, int zip2, double weight, double h, double l, double w)
     {
