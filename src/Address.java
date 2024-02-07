@@ -15,9 +15,15 @@ public class Address {
         this.state = state;
         zip = new int[5];
         String zString = Integer.toString(z);
-        for(int i = 0;i<zString.length();i++)
+        try{
+            for(int i = 0;i<5;i++)
+            {
+                zip[i] = Integer.parseInt(zString.substring(i,i+1));
+            }
+        }
+        catch(IndexOutOfBoundsException e)
         {
-            zip[i] = Integer.parseInt(zString.substring(i,i+1));
+            System.out.println("Added 0 at the end so there is exactly 5 digits");
         }
     }
     public Address(Address a)
@@ -62,10 +68,16 @@ public class Address {
             }
             else{
                 zip = new int[5];
-                for(int i = 0;i<words.length();i++)
-                {
-                    zip[i] = Integer.parseInt(words.substring(i,i+1));
-                }
+               try{
+                   for(int i = 0;i<5;i++)
+                   {
+                       zip[i] = Integer.parseInt(words.substring(i,i+1));
+                   }
+               }
+               catch (IndexOutOfBoundsException e)
+               {
+                   System.out.println("Added 0 at the end so there is exactly 5 digits");
+               }
                 break;
             }
 
