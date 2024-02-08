@@ -40,4 +40,10 @@ public class Package {
     public double getHeight() {
         return height;
     }
+
+    public String toString()
+    {
+       return origin + "\n" + destination + "\n" + weight + "\n" + length + "\n" + width + "\n" + height;
+    }
+
 }
