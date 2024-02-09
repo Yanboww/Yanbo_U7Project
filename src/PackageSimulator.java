@@ -22,6 +22,8 @@ public class PackageSimulator {
                 }
                 if(Integer.parseInt(zip)>99950) zip = "99950";
                 if(Integer.parseInt(zip2)>99950) zip2 = "99950";
+                if(Integer.parseInt(zip)<1) zip = "00001";
+                if(Integer.parseInt(zip2)<1) zip2 = "00001";
             }
             double weight = Math.random()*69.9+0.1;
             double totalGirth = 131;
